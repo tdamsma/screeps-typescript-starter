@@ -17,7 +17,7 @@ if (i == 0) {
 export default {
   input: "src/main.ts",
   output: {
-    file: "dist/main.js",
+    file: "C:/Users/tdams/AppData/Local/Screeps/scripts/127_0_0_1___21025/default/main.js",
     format: "cjs"
   },
 
@@ -26,7 +26,7 @@ export default {
   plugins: [
     clean(),
     resolve(),
-    commonjs(),
+    commonjs({ sourceMap: false}),
     typescript({tsconfig: "./tsconfig.json"}),
     screeps({config: cfg, dryRun: cfg == null})
   ]
